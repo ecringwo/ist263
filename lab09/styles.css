@@ -1,0 +1,26 @@
+a:link {color: #046582}
+
+body{
+    background-color: #edffec;
+    color: #e4bad4;
+}
+nav{background-color: #f39189;}
+nav a {color:#7868e6;}
+nav a:hover {background-color: #e4fbff;}
+
+nav {
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+    nav a {
+        display: block;
+        width: 100%;
+        padding: 8px;
+    }
+    span {
+        display: none; 
+    }
+
+}
