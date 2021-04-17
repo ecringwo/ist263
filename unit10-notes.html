@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Unit 10 Notes Accessibility</title>
+        <style>
+            #skip {
+                position: absolute;
+                left: -999px;
+                background-color: white;
+                border: 1px solid black;
+            }
+            /*this positions based on top left viewport and pushes the skip link off screen*/
+            #skip:focus {
+                position: absolute;
+                left: 10px;
+            }
+            /*when you tab to skip link it moves it back on screen*/
+        </style>
+    </head>
+    <body>
+        <h1>Accessibility</h1>
+        <!--make sure you use h1 for main heading, h2 for subheading, h3 for sub-subheading, etc.-->
+
+        <img src="images/LI-Logo.png" width="50" alt="LinkedIn Logo">
+        <!--nothing in quotes means screen reader ignores it-->
+        <!--do not image of or photo of-->
+
+        <a href="maincontent" id="skip">Skip to Content</a>
+        <!--pound sign says we are linking within page to an element that has an id of maincontent-->
+        
+        <a href="http://www.google.com" tabindex="3"> Google</a>
+        <a href="http://www.amazon.com" tabindex="2">Amazon</a>
+        <a href="http://www.ebay.com" tabindex="1">Ebay</a>
+        <!--for complex layputs determine order of irtems tabbed through-->
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultrices eros lectus, eget porttitor nunc imperdiet quis. Vestibulum congue sed lacus ut pharetra. Mauris tristique lorem nec rhoncus elementum. Sed dictum, leo vel vulputate efficitur, leo odio porttitor enim, scelerisque rutrum enim sapien et odio. Proin ullamcorper sem odio, vitae congue ipsum elementum eu. Proin vel dui orci. Praesent iaculis vel erat eget condimentum. Suspendisse potenti. Quisque in elit vel mauris vulputate scelerisque sit amet vel purus.</p>
+        <p>Mauris augue dui, faucibus quis metus quis, gravida rhoncus ipsum. Quisque vestibulum tristique mattis. Proin volutpat libero tempor vehicula ornare. Proin non iaculis libero. Fusce sit amet dapibus mauris, a egestas augue. Nam finibus magna at diam ullamcorper volutpat. Morbi eget rhoncus sem, in sodales magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi leo neque, efficitur quis dui vitae, accumsan porttitor metus.</p>
+        
+        <a id="maincontent"></a>
+        <!--here's the thing the anchor tag links to-->
+        <p>Nam magna eros, malesuada nec orci et, pretium gravida lectus. Cras nec neque at neque pulvinar commodo vel vel turpis. Quisque eget posuere nunc. Aenean cursus ex nulla, et commodo neque hendrerit eget. Morbi sit amet accumsan sem, sit amet auctor lectus. Nam laoreet eleifend dui, eu vehicula tortor faucibus vitae. Nullam et urna eros. Curabitur nibh risus, euismod vel magna ut, pellentesque pharetra quam.</p>
+    </body>
+</html>
