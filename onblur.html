@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Onblur Notes (JavaScript Example)</title>
+        <script>
+            function YouLeft() {
+                //alert('you left this form element');
+                document.getElementById("message").innerHTML="you left this form element"
+            }
+        </script>
+    </head>
+    <body> 
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel hendrerit tellus, eget sollicitudin diam. Aliquam non dapibus magna, et placerat orci. Quisque aliquet dapibus magna, eget pharetra tortor lacinia at. Donec varius, metus vitae lobortis varius, tellus massa tincidunt felis, eget sollicitudin ex purus eu lacus. Praesent aliquam ipsum nec malesuada pellentesque. Etiam dapibus mauris non malesuada pretium. Ut suscipit neque fermentum, feugiat lorem vel, posuere dolor. Nulla pellentesque tristique egestas. Praesent vulputate nibh laoreet ultrices fermentum. Duis eget ex non eros aliquet molestie. Etiam in convallis nisi. Phasellus purus urna, lobortis ut nisl sed, ultricies dapibus metus. Phasellus eget leo aliquam, blandit lectus vitae, interdum mi. Nunc eu laoreet metus.
+        </p>
+            <form action="mailto:ecringwo@syr.edu" method="POST">
+                <label for="firstname">Enter First Name:</label>
+                <input type="text" name="First Name" id="firstname" onblur="YouLeft();"> <br>
+                <label for="firstname">Enter Last Name:</label>
+                <input type="text" name="Last Name" id="lastname"> <br>
+        
+                <input type="submit" value="Submit">
+            </form>
+            <div id="message"></div> <!--this is where i'm gonna bring up the message-->
+    </body>
+</html>
