@@ -5,7 +5,34 @@
         <title>About Me</title>
 
         <link rel="stylesheet" href="../project/styles.css">
-        
+
+    <style>
+        body {background-color: pink;}
+        nav {text-align: center;
+            font-size: larger;
+        }
+        h1 {text-align: center;}
+        .box1 {display:flex;
+                background-color: white;
+                margin: 20px;
+                padding: 20px;
+                border-radius: 1em;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+            }
+            .p1, .p2 {float: left;}
+
+            .box2 {display: flex;
+                background-color: white;
+                margin: 20px;
+                padding: 20px;
+                border-radius: 1em;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+            }
+    </style>
     </head>
     <body>
         <nav>
@@ -14,18 +41,30 @@
             <a href="http://ecringwo.github.io/ist263/project/cold-day.html">Cold Day Outfit</a>
         </nav>
         <h1>About Me</h1>
-        <img src="../project/images/selfie.jpg" alt="Picture of Me" width="315" height="520">
-        <img src="../project/images/syracuse.jpg" alt="Syracuse Logo" width="310" height="300">
+        <div class="box1">
+        <div class="introduction">
         <p>
             Hi everyone! I’m Emma Ringwood, a Junior at Syracuse University majoring in Information Management with a concentration in Digital Retail Strategies. I also have a Business Minor in the Whitman School of Management. I’ve always been interested in retail and fashion so thought it’d be a great opportunity to concentrate in that within the iSchool. Doing so has allowed me to learn so much more about IT/Retail that I otherwise wouldn't have been able to.
         </p>
+        </div>
+        <!--
+        <div class="selfie">
+            <img src="../project/images/selfie.jpg" alt="Picture of Me" width="315" height="520">
+        </div>
+        -->
+        </div>
+
+        <div class="box2">
+        <img src="../project/images/syracuse.jpg" alt="Syracuse Logo" width="310" height="300">
         <p>
             I love shopping and finding cute new clothes that I can add to my wardrobe, and that's why I’m here! On my website you'll be able to find outfit ideas, follow the trends of each season and advice on deals or sales that brands I typically shop from are having. There’s nothing better than being able to look good, without breaking the bank. As a college student I know that it’s more difficult to shop due to time and money constraints, so this is where I come to help. 
         </p>
         <p>
             <strong>Ever since I was younger I always loved to express myself with clothes so I can’t wait to share this all with you! Down below I have left a space for you to leave feedback and give me ideas on what else to include on future pages, let me know what you're thinking!</strong> 
         </p>
+        </div>
         <hr>
+        <div class="formbox">
         <form action="mailto:ecringwo@syr.edu" method="POST">
             <label for="firstname">Enter First Name:</label>
             <input type="text" name="First Name" id="firstname"> <br>
@@ -35,5 +74,6 @@
             <label for="comments">Enter what you would like to see on future pages:</label> <br>
             <textarea name="comments" id="comments" rows="10" cols="100">Tell me what you think!!!</textarea>
         </form>
+        </div>
     </body>
 </html>

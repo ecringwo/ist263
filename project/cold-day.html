@@ -7,36 +7,89 @@
         <link rel="stylesheet" href="../project/styles.css">
         
     <style>
-        .row1 {display: flex; flex-wrap: wrap;}
-            .box1, .box2, .box3 {flex: 1;}
+        .strong {text-align: center;}
+        h1 {text-align: center;}
+        nav {text-align: center;
+            font-size: larger;
+        }
+        .strong {font-size: large;}
+
+        .clothes {display: flex; flex-wrap: wrap;}
+        .boots, .hat, .coat {flex: 1;
+           margin: 20px;
+           padding: 20px;
+           border-radius: 1em;
+           text-align: center;
+        }
+        .box2 {
+            display:flex;
+            background-color: lightgrey;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 1em;
+            flex-wrap: wrap;
+        }
+        .strong {
+            display:flex;
+                background-color: black;
+                margin: 10px;
+                padding: 10px;
+                border-radius: 1em;
+                flex-wrap: wrap;
+                text-align: center;
+                color: white;
+        }
+        @media only screen and (max-width: 600px) {
+                body {background-color: #7AD;}
+            }
+        @media only screen and (min-width: 920px) {
+            body {background-color: aliceblue;}
+        }
+        #skip {
+                position: absolute;
+                left: -999px;
+                background-color: white;
+                border: 1px solid black;
+            }
+        #skip:focus {
+            position: absolute;
+            left: 10px;
+        }
     </style>
     
 </head>
     <body>
+        <a href="maincontent" id="skip">Skip to Main Content</a>
         <nav>
             <a href="http://ecringwo.github.io/ist263/project/about-me.html"> Home <span>|</span></a>
             <a href="http://ecringwo.github.io/ist263/project/current-trends.html"> Current Trends <span>|</span></a>
             <a href="http://ecringwo.github.io/ist263/project/cold-day.html">Cold Day Outfit</a>
         </nav>
         <h1>What to Wear on a Cold Day</h1>
-        <div class="row1">
-            <div class="box1">
-                <img src="../project/images/boot.jpeg" alt="Black Boots" width="300" height="300">
+        <div class="clothes">
+            <div class="boots">
+                <img src="../project/images/boot.jpeg" alt="Tall, Black Sorel Winter Boots" width="300" height="300"> <br>
                 <a href="https://www.dickssportinggoods.com/p/sorel-womens-joan-of-arctic-insulated-waterproof-winter-boots-15sorwjnfrtcblckxfbo/15sorwjnfrtcblckxfbo">Winter Boots</a>
             </div>
-            <div class="box2">
-                <img src="../project/images/hat.jpeg" alt="Grey Hat" width="300" height="300">
+            <div class="hat">
+                <img src="../project/images/hat.jpeg" alt="Grey Carhartt Winter Hat" width="300" height="300"> <br>
                 <a href="https://www.dickssportinggoods.com/p/carhartt-a18-watch-hat-15cttmcrylcwtchcpapa/15cttmcrylcwtchcpapa">Winter Hat</a>
             </div>
-            <div class="box3">
-                <img src="../project/images/coat.jpeg" alt="Black Coat" width="300" height="300"> 
+            <div class="coat">
+                <img src="../project/images/coat.jpeg" alt="Black, Puffy Winter Coat" width="300" height="300"> <br>
                 <a href="https://www.ugg.com/s/UGG-US/women-apparel-outerwear/izzie-puffer-jacket-nylon/192410327201.html?utm_source=google&utm_medium=pla&cq_src=google_ads&cq_cmp=204491136&cq_con=103303014658&cq_term=&cq_med=pla&cq_plac=&cq_net=g&cq_pos=&cq_plt=gp&gclid=Cj0KCQjw3duCBhCAARIsAJeFyPX7_XjDqJzldbP0Q-AvAqZwHtt-57qPWFWaS3L0TLfCT7hVTtvK3voaAhzSEALw_wcB&gclsrc=aw.ds">Winter Coat</a>
             </div>
         </div>
+        <br>
+        <a id="maincontent"></a>
+        <div class="strong">
         <p>
             <strong>Going to school at Syracuse University means that some days might be freezing cold, snowing, and extremely windy. That being said, it’s important to know how to dress for this weather while still looking cute if you want!</strong>
         </p>
+        <br>
+        </div>
 
+        <div class="box2">
         <p>
             It is SO essential to find a winter jacket that will keep you warm most importantly. Nearby campus you can find a huge selection to choose from at J. Michaels on Marshall Street. All of the jackets that they sell are super cute, but also will keep you warm in this harsh winter weather. It’s also another option to go online and find a jacket that you can order and have shipped to you. 
         </p>
@@ -49,5 +102,6 @@
         <p>
             Overall, since most of the year it is chilly or snowy getting these essentials will help you stay warm and you’ll be able to even keep wearing them after graduation if you decide to move somewhere cold. For those of you that go to school in warmer weather, I’ll have a page about that and I’m also very jealous! 
         </p>
+        </div>
     </body>
 </html>
