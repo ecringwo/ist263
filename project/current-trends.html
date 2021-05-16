@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>My Favorite Current Trends</title>
 
         <link rel="stylesheet" href="../project/styles.css">
@@ -16,6 +17,12 @@
             color: navy;
             display: flex;
             flex-wrap: wrap;
+
+            .firstparagraphs {float: left;}
+            .clear {clear: both;}
+
+            .imagesbox1{float: right;}
+            .clear {clear: both;}
         }
             h1 {text-align: center;}
             .box1 {display:flex;
@@ -27,7 +34,7 @@
                 align-items: center;
                 justify-content: center;
             }
-            .p1, .p2, .p3 {float: left;}
+            
 
             .box2 {display: flex;
                 background-color: white;
@@ -89,6 +96,8 @@
             border-radius: 1em;
             background-color:#CBC3E3;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+            justify-content: center;
         }
         .p3 {flex:1;
             flex-wrap: wrap;
@@ -116,11 +125,8 @@
         </style>
         <script>
             function changenav() {
-                //document.getElementById("navlinks").style.display = "block";
                 if(document.getElementById("navlinks").style.getPropertyValue("display") == 'block') {
-                /* ^^this is our true/false statement looking to see if navlinks is display: block */ 
                     document.getElementById("navlinks").style.display = "none";
-                    /* ^^ this turns off the stacked nav if it is */
                 }
                 else {
                     document.getElementById("navlinks").style.display = "block";
@@ -140,12 +146,10 @@
         </nav>
         <h1>My Favorite Current Trends</h1>
     <div class="box1">
-        <div class="p1">
+        <div class="firstparagraphs">
         <p>
             With being in quarantine this past spring, I’m sure everyone’s favorite item in their closet was sweatpants. Trust me though, me too. But recently people have been turning wearing sweatpants and sweatshirts in a cute, put-together look. I love this because a matching sweatsuit is extremely comfy and effortless. My favorite is the monochrome look that you can achieve by wearing a sweatshirt and pair of sweatpants that are the same colors. You can wear a matching sweat set to class, to just hang out, to run errands- all while still being comfortable.
         </p> 
-        </div>
-        <div class="p2">
         <p>
             Some of my favorite places to buy pieces for this look includes, Urban Outfitters, Aviator Nation, and Wildfox. Yet, there are so many options to buy a matching sweat suit anywhere. On the less expensive side you can go to Amazon, Target, and NastyGal. Sometimes the cheaper brands have the best finds!
         </p>
