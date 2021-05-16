@@ -5,9 +5,21 @@
         <title>About Me</title>
 
         <link rel="stylesheet" href="../project/styles.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com"> 
+        <link href="https://fonts.googleapis.com/css2?family=Goblin+One&display=swap" rel="stylesheet">
 
     <style>
         body {background-color: pink;}
+        .topofpage {font-size: 30px;
+            font-family: 'Goblin One', cursive;
+            color: #400023;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .bannerimage {display: flex;
+            flex-wrap: wrap;
+            width:max-content;
+    }
         nav {text-align: center;
             font-size: larger;
         }
@@ -39,26 +51,73 @@
             }   
             nav a {color:black;}
             nav a:hover {background-color: orange;}
+
+            .formbox {margin: 10px;
+                padding: 10px;
+                border-radius: 1em;}
+
+            @media only screen and (max-width: 600px) {
+                body {background-color: #FE5BAC;}
+            }
+        @media only screen and (min-width: 920px) {
+            body {background-color: pink;}
+        }
+        #skip {
+                position: absolute;
+                left: -999px;
+                background-color: white;
+                border: 1px solid black;
+            }
+        #skip:focus {
+            position: absolute;
+            left: 10px;
+        }
+        #hamicon {display: none;}
+            nav a:hover {background-color: orange;}
+            @media only screen and (max-width: 600px) {
+                span {display: none;}
+                #hamicon {display: block;}
+                nav a {
+                    display: block;
+                    padding: 10px 0px;
+                    }
+                #navlinks {display: none;}
+            }
     </style>
+    <script>
+        function changenav() {
+            //document.getElementById("navlinks").style.display = "block";
+            if(document.getElementById("navlinks").style.getPropertyValue("display") == 'block') {
+            /* ^^this is our true/false statement looking to see if navlinks is display: block */ 
+                document.getElementById("navlinks").style.display = "none";
+                /* ^^ this turns off the stacked nav if it is */
+            }
+            else {
+                document.getElementById("navlinks").style.display = "block";
+            }
+        }
+    </script>
     </head>
     <body>
+        <div class="topofpage">
+        <p>EMMA'S FASHION</p>
+        </div>
         <nav>
             <a href="http://ecringwo.github.io/ist263/project/about-me.html"> Home <span>|</span></a>
             <a href="http://ecringwo.github.io/ist263/project/current-trends.html"> Current Trends <span>|</span></a>
             <a href="http://ecringwo.github.io/ist263/project/cold-day.html">Cold Day Outfit</a>
         </nav>
         <h1>About Me</h1>
+        <div class="bannerimage">
+            <img src="../project/images/clothes.jpg" alt="Clothes on a hanging rack">
+        </div>
         <div class="box1">
         <div class="introduction">
         <p>
             Hi everyone! I’m Emma Ringwood, a Junior at Syracuse University majoring in Information Management with a concentration in Digital Retail Strategies. I also have a Business Minor in the Whitman School of Management. I’ve always been interested in retail and fashion so thought it’d be a great opportunity to concentrate in that within the iSchool. Doing so has allowed me to learn so much more about IT/Retail that I otherwise wouldn't have been able to.
         </p>
         </div>
-        <!--
-        <div class="selfie">
-            <img src="../project/images/selfie.jpg" alt="Picture of Me" width="315" height="520">
         </div>
-        -->
         </div>
 
         <div class="box2">

@@ -5,9 +5,18 @@
         <title>My Favorite Current Trends</title>
 
         <link rel="stylesheet" href="../project/styles.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com"> 
+        <link href="https://fonts.googleapis.com/css2?family=Goblin+One&display=swap" rel="stylesheet">
 
         <style>
             body {background-color: #CBC3E3;}
+            /*pick a new font family from google fonts, change above links too*/ 
+            .topofpage {font-size: 30px;
+            font-family: 'Goblin One', cursive;
+            color: navy;
+            display: flex;
+            flex-wrap: wrap;
+        }
             h1 {text-align: center;}
             .box1 {display:flex;
                 background-color: white;
@@ -18,7 +27,7 @@
                 align-items: center;
                 justify-content: center;
             }
-            .p1, .p2 {float: left;}
+            .p1, .p2, .p3 {float: left;}
 
             .box2 {display: flex;
                 background-color: white;
@@ -32,10 +41,21 @@
             nav {text-align: center;
                 font-size: larger;
             }
-
+        
             .imagesbox1 {
+                display: flex;
+                float: right;
                 align-items: center;
                 justify-content: center;
+                margin: 1em;
+            }
+            .imagesbox2 {
+                display: flex;
+                float: right;
+                align-items: center;
+                justify-content: center;
+                margin: 1em;
+                
             }
 
             nav {background-color: white;
@@ -45,10 +65,74 @@
             }   
             nav a {color:black;}
             nav a:hover {background-color: orange;}
+
+            @media only screen and (max-width: 600px) {
+                body {background-color: #A32CC4;}
+            }
+        @media only screen and (min-width: 920px) {
+            body {background-color: #CBC3E3;}
+        }
+        #skip {
+                position: absolute;
+                left: -999px;
+                background-color: white;
+                border: 1px solid black;
+            }
+        #skip:focus {
+            position: absolute;
+            left: 10px;
+        }
+        button {
+            font-size: 14px;
+            margin: 15px;
+            padding: 15px;
+            border-radius: 1em;
+            background-color:#CBC3E3;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .p3 {flex:1;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+        .imagesbox1 {flex: 3;}
+        .linksection {flex: 1;
+            align-items: center;
+            justify-content: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .imagesbox2 {flex: 3;}
+        #hamicon {display: none;}
+            nav a:hover {background-color: orange;}
+            @media only screen and (max-width: 600px) {
+                span {display: none;}
+                #hamicon {display: block;}
+                nav a {
+                    display: block;
+                    padding: 10px 0px;
+                    }
+                #navlinks {display: none;}
+            }
         </style>
+        <script>
+            function changenav() {
+                //document.getElementById("navlinks").style.display = "block";
+                if(document.getElementById("navlinks").style.getPropertyValue("display") == 'block') {
+                /* ^^this is our true/false statement looking to see if navlinks is display: block */ 
+                    document.getElementById("navlinks").style.display = "none";
+                    /* ^^ this turns off the stacked nav if it is */
+                }
+                else {
+                    document.getElementById("navlinks").style.display = "block";
+                }
+            }
+        </script>
     </head>
 
     <body>
+        <div class="topofpage">
+            <p>EMMA'S FASHION</p>
+            </div>
         <nav>
             <a href="http://ecringwo.github.io/ist263/project/about-me.html"> Home <span>|</span></a>
             <a href="http://ecringwo.github.io/ist263/project/current-trends.html"> Current Trends <span>|</span></a>
@@ -58,7 +142,7 @@
     <div class="box1">
         <div class="p1">
         <p>
-            With being in quarantine this past spring, I’m sure everyone’s favorite item in their closet was sweatpants. Trust me though, me too. But recently people have been turning wearing sweatpants and sweatshirts in a cute, put-together look. I love this because a matching sweatsuit is extremely comfy and effortless. My favorite is the monochrome look that you can achieve by wearing a sweatshirt and pair of sweatpants that are the same colors. You can wear a matching sweat set to class, to just hang out, to run errands- all while still being comfortable
+            With being in quarantine this past spring, I’m sure everyone’s favorite item in their closet was sweatpants. Trust me though, me too. But recently people have been turning wearing sweatpants and sweatshirts in a cute, put-together look. I love this because a matching sweatsuit is extremely comfy and effortless. My favorite is the monochrome look that you can achieve by wearing a sweatshirt and pair of sweatpants that are the same colors. You can wear a matching sweat set to class, to just hang out, to run errands- all while still being comfortable.
         </p> 
         </div>
         <div class="p2">
@@ -66,9 +150,17 @@
             Some of my favorite places to buy pieces for this look includes, Urban Outfitters, Aviator Nation, and Wildfox. Yet, there are so many options to buy a matching sweat suit anywhere. On the less expensive side you can go to Amazon, Target, and NastyGal. Sometimes the cheaper brands have the best finds!
         </p>
         </div>
+        <div class="p3">
+            <p>
+               <strong>Links to website to purchase:</strong> 
+            </p>
+            <a href="https://litboutique.com/products/perfect-match-sweatpants-hot-pink"> <button type="button">Pink Matching Set</button></a>
+        </div>
         <div class="imagesbox1">
+        
         <img src="../project/images/boys-lie-sweats.jpg" alt="Pink Matching Set" width="300" height="400">
-        <a href="https://litboutique.com/products/perfect-match-sweatpants-hot-pink">Pink Matching Set</a>
+        <!-- <a href="https://litboutique.com/products/perfect-match-sweatpants-hot-pink"> <button type="button">Pink Matching Set</button></a>!-->
+        
         <img src="../project/images/sweatsuit.jpeg" alt="Tie-Dye Matching Set" width="300" height="400">
         </div>
     </div>
@@ -80,12 +172,19 @@
         <p>
             The best places to buy these are Levi’s, Zara, and Pistola Denim. These three places are all of different price points. Zara you can find jeans for around $30, Levi’s ranges, and Pistola are the most expensive but great quality! With Levi’s especially you can find great deals and they offer a student discount on their website for 15% off your purchase. 
         </p>
+        <div class="linksection">
+        <p>
+            <strong>Links to websites to purchase:</strong> 
+        </p>
+        <a href="https://www.zara.com/us/en/wide-leg-full-length-ripped-jeans-p06045025.html"> <button type="button">Zara Jeans</button></a> <br>
+        <a href="https://www.levi.com/US/en_US/clothing/women/jeans/501-original-cropped-womens-jeans/p/362000157"> <button type="button">Levi's Jeans</button></a>
+        </div>
         <div class="imagesbox2">
         <img src="../project/images/zara-jeans.jp2" alt="Zara Jeans" width="300" height="400"> 
-        <a href="https://www.zara.com/us/en/wide-leg-full-length-ripped-jeans-p06045025.html">Zara Jeans</a>
+        <!-- <a href="https://www.zara.com/us/en/wide-leg-full-length-ripped-jeans-p06045025.html"> <button type="button">Zara Jeans</button></a> !-->
         <img src="../project/images/levis-jeans.jpg" alt="Levi's Jeans" width="300" height="400">
-        <a href="https://www.levi.com/US/en_US/clothing/women/jeans/501-original-cropped-womens-jeans/p/362000157">Levi's Jeans</a>
-        </div>
+        <!-- <a href="https://www.levi.com/US/en_US/clothing/women/jeans/501-original-cropped-womens-jeans/p/362000157"> <button type="button">Levi's Jeans</button></a> !-->
+        </div> 
     </div>
     </body>
 </html>
