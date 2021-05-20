@@ -17,10 +17,6 @@
             display: flex;
             flex-wrap: wrap;
         }
-        .bannerimage {display: flex;
-            flex-wrap: wrap;
-            width:max-content;
-    }
         nav {text-align: center;
             font-size: larger;
         }
@@ -44,6 +40,9 @@
                 flex-wrap: wrap;
                 align-items: center;
                 justify-content: center;
+            }
+            .box1, .box2 {
+                font-size: 18px;
             }
             nav {background-color: white;
                 margin: 20px;
@@ -112,6 +111,7 @@
         </div>
         <div class="box1">
         <div class="introduction">
+        
         <p>
             Hi everyone! I’m Emma Ringwood, a Junior at Syracuse University majoring in Information Management with a concentration in Digital Retail Strategies. I also have a Business Minor in the Whitman School of Management. I’ve always been interested in retail and fashion so thought it’d be a great opportunity to concentrate in that within the iSchool. Doing so has allowed me to learn so much more about IT/Retail that I otherwise wouldn't have been able to.
         </p>
@@ -131,12 +131,14 @@
         <hr>
         <div class="formbox">
         <form action="mailto:ecringwo@syr.edu" method="POST">
-            <label for="firstname">Enter First Name:</label>
+            <label for="firstname"><strong>First Name:</strong> </label>
             <input type="text" name="First Name" id="firstname"> <br>
-            <label for="firstname">Enter Last Name:</label>
+            <br>
+            <label for="firstname"><strong>Enter Last Name:</strong></label>
             <input type="text" name="Last Name" id="lastname"> <br>
+            <br>
 
-            <label for="comments">Enter what you would like to see on future pages:</label> <br>
+            <label for="comments"> <strong>Enter what you would like to see on future pages:</strong></label> <br>
             <textarea name="comments" id="comments" rows="10" cols="100">Tell me what you think!!!</textarea>
         </form>
         </div>
