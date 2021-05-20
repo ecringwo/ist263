@@ -54,7 +54,8 @@
 
             .formbox {margin: 10px;
                 padding: 10px;
-                border-radius: 1em;}
+                border-radius: 1em;
+                color: #400023;}
 
             @media only screen and (max-width: 600px) {
                 body {background-color: #FE5BAC;}
@@ -131,15 +132,16 @@
         <hr>
         <div class="formbox">
         <form action="mailto:ecringwo@syr.edu" method="POST">
-            <label for="firstname"><strong>First Name:</strong> </label>
+            <label for="firstname"> <strong>First Name:</strong> </label>
             <input type="text" name="First Name" id="firstname"> <br>
             <br>
-            <label for="firstname"><strong>Enter Last Name:</strong></label>
+            <label for="firstname"> <strong>Enter Last Name:</strong> </label>
             <input type="text" name="Last Name" id="lastname"> <br>
             <br>
 
-            <label for="comments"> <strong>Enter what you would like to see on future pages:</strong></label> <br>
-            <textarea name="comments" id="comments" rows="10" cols="100">Tell me what you think!!!</textarea>
+            <label for="comments"> <strong>Enter what you would like to see on future pages:</strong> </label> <br>
+            <textarea name="comments" id="comments" rows="10" cols="100">Tell me what you think!!!</textarea> <br>
+            <input type="submit" value="Submit">
         </form>
         </div>
     </body>
